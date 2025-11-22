@@ -1,3 +1,31 @@
+// Mobile Navigation Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -31,7 +59,7 @@ if (contactForm) {
         // Reset the form
         contactForm.reset();
         
-        // TODO: I am to replace this with actual form submission to your backend (This will be later)
+        // TODO: Replace this with actual form submission to your backend
         // Example with fetch:
         /*
         fetch('your-backend-url/contact', {
@@ -70,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe service cards and portfolio items
 document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.service-card, .portfolio-item');
+    const elements = document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card, .blog-card, .stat-item');
     elements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
