@@ -44,40 +44,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would typically send the data to a server
-        // For now, we'll just show an alert
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset the form
-        contactForm.reset();
-        
-        // TODO: Replace this with actual form submission to your backend
-        // Example with fetch:
-        /*
-        fetch('your-backend-url/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, phone, message })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Message sent successfully!');
-            contactForm.reset();
-        })
-        .catch(error => {
-            alert('Error sending message. Please try again.');
-        });
-        */
+        // Don't prevent default - let Formspree handle it
+        // Show loading state
+        const submitBtn = this.querySelector('.submit-button');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
     });
 }
 
