@@ -1689,3 +1689,75 @@ footer {
         justify-content: center;
     }
 }
+
+
+/* Extra Small Devices (Phones under 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .quality-text h2,
+    .md-text h2,
+    .about-content h2,
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .service-card,
+    .testimonial-card,
+    .value-card,
+    .blog-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .process-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .portfolio-grid,
+    .portfolio-grid-full {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button,
+    .cta-button-outline {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-links {
+        width: 80%;
+    }
+
+    .contact-form-full {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+}
