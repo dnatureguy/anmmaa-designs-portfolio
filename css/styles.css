@@ -205,6 +205,58 @@ nav {
     animation: float 8s ease-in-out infinite reverse;
 }
 
+/* Quality Statement Section */
+.quality-section {
+    padding: 8rem 5%;
+    background: #193a4c;
+}
+
+.quality-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quality-text {
+    flex: 1;
+}
+
+.quality-text h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.quality-text p {
+    color: #ffffff;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.quality-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quality-img-1,
+.quality-img-2 {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.quality-img-1:hover,
+.quality-img-2:hover {
+    transform: scale(1.02);
+}
+
+
 /* MD Section */
 .md-section {
     padding: 8rem 5%;
