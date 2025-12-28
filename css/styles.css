@@ -1589,6 +1589,14 @@ footer {
         flex-direction: column;
     }
 
+    .quality-content {
+        flex-direction: column;
+    }
+
+    .quality-text h2 {
+        font-size: 1.8rem;
+    }
+
     .mv-grid {
         grid-template-columns: 1fr;
     }
