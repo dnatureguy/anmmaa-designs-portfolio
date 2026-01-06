@@ -33,11 +33,25 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #fdec00;
     z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* Makes it a circle */
+    transition: transform 0.3s;
+}
+
+.logo img {
+    height: 35px;  /* Adjust this to your preferred size */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .hamburger {
@@ -1526,6 +1540,10 @@ footer {
         display: flex;
     }
 
+      .logo img {
+        height: 40px; 
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -1693,6 +1711,11 @@ footer {
 
 /* Extra Small Devices (Phones under 480px) */
 @media (max-width: 480px) {
+
+    .logo img {
+        height: 35px;  
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
